@@ -41,4 +41,4 @@ barplot(sper_sorted,
         args.legend = list(x = "topright"),
         cex.names = 0.5, 
         las = 2)  # Rotate labels vertically
-
+sper
