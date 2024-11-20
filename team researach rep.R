@@ -19,13 +19,14 @@ df2_subset1 <- df2[df2$Country %in% countries_of_interest, ]
 
 # Create the table
 TB <- table(df2_subset1$`Fatal(Y/N)`, df2_subset1$Country)
+TB
 sper <- prop.table(TB, margin=2) * 100
-
+sper
 # Sort the table by the percentage of fatalities ("Y") in descending order
 sorted_indices <- order(sper[1, ], decreasing=TRUE)
 sper_sorted <- sper[, sorted_indices]
 
-# Perform chi-squared test
+# Perform chi-squared test 
 chisq.test(sper_sorted)
 
 # Plotting
@@ -39,6 +40,6 @@ barplot(sper_sorted,
         ylim = c(0, 100), 
         legend.text = c("Y", "N"), 
         args.legend = list(x = "topright"),
-        cex.names = 0.5, 
+        cex.names = 0.7, 
         las = 2)  # Rotate labels vertically
 sper
