@@ -21,8 +21,9 @@ df2_subset1 <- df2[df2$Country %in% countries_of_interest, ]
 
 
 # Create the table
-TB <- table(df2_subset1$`Fatal(Y/N)`, df2_subset1$Country)
-sper <- prop.table(TB, margin=2) * 100
+TB <- table(df2_subset1$`Fatal(Y/N)`, df2_subset1$Country)  # Create a contingency table
+sper <- prop.table(TB, margin = 2) * 100  # Calculate percentages column-wise
+
 
 # Sort the table by the percentage of fatalities ("Y") in descending order
 sorted_indices <- order(sper[1, ], decreasing=TRUE)
