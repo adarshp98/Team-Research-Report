@@ -26,8 +26,8 @@ sper <- prop.table(TB, margin = 2) * 100  # Calculate percentages column-wise
 
 
 # Sort the table by the percentage of fatalities ("Y") in descending order
-sorted_indices <- order(sper[1, ], decreasing=TRUE)
-sper_sorted <- sper[, sorted_indices]
+sorted_indices <- order(sper[1, ], decreasing = TRUE)  # Get sorted indices based on the first row
+sper_sorted <- sper[, sorted_indices]  # Reorder the columns of sper
 
 # Perform chi-squared test
 chisq.test(sper_sorted)
