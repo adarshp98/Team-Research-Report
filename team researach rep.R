@@ -8,12 +8,7 @@ df2 <- subset(df, `Fatal(Y/N)` %in% c("Y", "N"))
 
 
 # List of countries to include (in capital letters)
-countries_of_interest <- c("USA", "AUSTRALIA", "SOUTH AFRICA", "NEW ZEALAND", 
-                           "BRAZIL", "BAHAMAS", "ITALY", "FIJI", "MEXICO", 
-                           "NEW CALEDONIA", "CUBA", "SPAIN", "EGYPT", 
-                           "INDIA", "PAPUA NEW GUINEA", "REUNION", "MOZAMBIQUE", "CROATIA", "JAPAN", 
-                           "IRAN", "PANAMA", "GREECE", "JAMAICA", "ENGLAND", "SRI LANKA", "TONGA", 
-                           "BERMUDA", "FRANCE", "IRAQ")
+countries_of_interest <- c("MEXICO","CUBA","INDIA", "PAPUA NEW GUINEA", "REUNION", "MOZAMBIQUE", "CROATIA", "JAPAN")
 
 
 # Subset the data to include only the countries you're interested in
@@ -37,17 +32,13 @@ par(mar = c(5, 4, 4, 2) + 0.1)  # Adjust the margins of the plot
 
 
 barplot(sper_sorted, 
-        col = c("blue", "lavender"), 
+        col = c("green", "gray"), 
         xlab = "Country", 
         ylab = "Percentage", 
-        main = "Stacked Bar Of Fatality between countries", 
+        main = "Stacked Bar Of Fatality between countries(lessthan 60%)", 
         ylim = c(0, 100), 
         legend.text = c("Y", "N"), 
         args.legend = list(x = "topright"),
         cex.names = 0.5, 
         las = 2)  # Rotate labels vertically
-<<<<<<< HEAD
 sper
-=======
-
->>>>>>> 7990334af985e205088399c19f5b119539c07d0e
