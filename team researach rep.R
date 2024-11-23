@@ -19,6 +19,7 @@ countries_of_interest <- c("USA", "AUSTRALIA", "SOUTH AFRICA", "NEW ZEALAND",
 # Subset the data to include only the countries you're interested in
 df2_subset1 <- df2[df2$Country %in% countries_of_interest, ]
 
+
 # Create the table
 TB <- table(df2_subset1$`Fatal(Y/N)`, df2_subset1$Country)
 sper <- prop.table(TB, margin=2) * 100
