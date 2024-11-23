@@ -33,7 +33,8 @@ sper_sorted <- sper[, sorted_indices]  # Reorder the columns of sper
 chisq.test(sper_sorted)
 
 # Plotting
-par(mar = c(5, 4, 4, 2) + 0.1)  # Adjusts the plot margins
+par(mar = c(5, 4, 4, 2) + 0.1)  # Adjust the margins of the plot
+
 
 barplot(sper_sorted, 
         col = c("blue", "lavender"), 
