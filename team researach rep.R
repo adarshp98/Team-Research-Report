@@ -44,11 +44,11 @@ barplot(sper_sorted,
         legend.text = c("Y", "N"), 
         args.legend = list(x = "topright"),
         cex.names = 0.6,
-        las = 2)  # Rotate labels vertically
+        las = 2,
+        font.lab = 2)  # Rotate labels vertically
 
 # Adding the xlab separately so that it doesn't overlap
 
-mtext("Country", side = 1, line = 6)
-
+mtext("Country", side = 1, line = 6, cex = 1.1, font = 2)
 
 sper
