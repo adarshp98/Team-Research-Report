@@ -37,7 +37,7 @@ par(mar = c(7, 4, 4, 2) + 0.1)  # Adjust the margins of the plot
 
 barplot(sper_sorted, 
         col = c("skyblue", "pink"), 
-        xlab = "country", 
+        xlab = "", 
         ylab = "Percentage", 
         main = "Stacked Bar Of Fatality between countries", 
         ylim = c(0, 100), 
@@ -45,5 +45,10 @@ barplot(sper_sorted,
         args.legend = list(x = "topright"),
         cex.names = 0.6,
         las = 2)  # Rotate labels vertically
+
+# Adding the xlab separately so that it doesn't overlap
+
+mtext("Country", side = 1, line = 6)
+
 
 sper
