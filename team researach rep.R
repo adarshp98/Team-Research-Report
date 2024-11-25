@@ -1,5 +1,6 @@
 # Subset the data for "Fatal(Y/N)" as "Y" or "N"
 df = attacks
+head(attacks,2) 
 colnames(df)[13] <- "Fatal(Y/N)"  # Renaming the 13th column to "Fatal(Y/N)"
 
 
