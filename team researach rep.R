@@ -37,7 +37,7 @@ chisq.test(sper_sorted)
 par(mar = c(7, 4, 4, 2) + 0.1)  # Adjust the margins of the plot
 
 barplot(sper_sorted, 
-        col = c("blue", "pink"), 
+        col = c("blue", "Red"), 
         xlab = "", 
         ylab = "Percentage", 
         main = "Stacked Bar Of Fatality between countries", 
